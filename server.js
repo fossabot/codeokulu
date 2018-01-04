@@ -48,6 +48,12 @@ app.get('/about', (req, res, next) => {
   });
 });
 
+app.get('/projects', (req, res, next) => {
+  res.render("projects", {
+    pageTitle:"Projects Page"
+  });
+});
+
 // bad - send back json with error message
 app.get('/bad', (req, res, next) => {
   res.send({
